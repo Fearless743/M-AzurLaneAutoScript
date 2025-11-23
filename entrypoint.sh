@@ -14,6 +14,11 @@ if [[ ! $ERROR =~ "module" ]]; then
     pip install --upgrade mxnet
 fi
 
+U2_INIT_FILE="/usr/local/lib/python3.7/site-packages/uiautomator2/init.py"
+if [ -f "$U2_INIT_FILE" ]; then
+    sed -i 's#https://tool.appetizer.io#https://gh-proxy.org/github.com#g' "$U2_INIT_FILE"
+fi
+
 # run alas
 python -m uiautomator2 init && \
 python /app/AzurLaneAutoScript/gui.py
