@@ -19,7 +19,7 @@ WORKDIR /app/AzurLaneAutoScript
 COPY deploy/docker/requirements.txt /tmp/requirements.txt
 RUN sed -i '/^av==/d' /tmp/requirements.txt && \
     printf '\nav==8.0.3\n' >> /tmp/requirements.txt && \
-    pip install --no-cache-dir -r /tmp/requirements.txt
+    pip install --no-cache-dir -r /tmp/requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 
 COPY . /app/AzurLaneAutoScript
 

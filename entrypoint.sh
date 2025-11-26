@@ -11,7 +11,7 @@ fi
 ERROR=$( { python -m mxnet | sed s/Output/Useless/ > outfile; } 2>&1 )
 if [[ ! $ERROR =~ "module" ]]; then
     echo "try to fix mxnet version"
-    pip install --upgrade mxnet
+    pip install --upgrade mxnet -i https://mirrors.aliyun.com/pypi/simple
 fi
 
 U2_INIT_FILE="/usr/local/lib/python3.7/site-packages/uiautomator2/init.py"
