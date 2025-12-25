@@ -186,6 +186,9 @@ class GeneratedConfig:
     EventPt_EventDailyAMapName = 'A1>A2>A3\nB1>B2>B3'
     EventPt_EventDailySpMapName = 'SP'
     EventPt_EventDailyCD = False
+    EventPt_EventResetStageAfterHours = 72
+    EventPt_EventResetStageName = 'A1'
+    EventPt_EventResetStageRecord = datetime.datetime(2020, 1, 1, 0, 0)
 
     # Group `Fleet`
     Fleet_Fleet1 = 1  # 1, 2, 3, 4, 5, 6
@@ -245,9 +248,8 @@ class GeneratedConfig:
     C124LargeLeveling_PickupAmmo = 3  # 3, 4, 5
 
     # Group `GemsFarming`
-    GemsFarming_ChangeFlagship = 'ship'  # ship, ship_equip
     GemsFarming_CommonCV = 'any'  # any, langley, bogue, ranger, hermes
-    GemsFarming_ChangeVanguard = 'ship'  # disabled, ship, ship_equip
+    GemsFarming_ChangeVanguard = 'ship'  # disabled, ship
     GemsFarming_CommonDD = 'any'  # any, favourite, aulick_or_foote, cassin_or_downes, z20_or_z21
     GemsFarming_CommissionLimit = True
 
